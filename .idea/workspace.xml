@@ -3,23 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="1b0e8140-9e31-46f7-92cb-294c2c5235c5" name="Default" comment="1">
       <change beforePath="$PROJECT_DIR$/.idea/dataSources/7914168c-f5fc-450b-880f-c343670666da.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/7914168c-f5fc-450b-880f-c343670666da.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/fgbokg/basic/query/BaseQuery.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/fgbokg/basic/query/BaseQuery.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/fgbokg/org/controller/ShopController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/fgbokg/org/controller/ShopController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/fgbokg/org/mapper/EmployeeMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/fgbokg/org/mapper/EmployeeMapper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/fgbokg/org/mapper/ShopMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/fgbokg/org/mapper/ShopMapper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/fgbokg/org/service/IEmployeeService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/fgbokg/org/service/IEmployeeService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/fgbokg/org/service/IShopService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/fgbokg/org/service/IShopService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/fgbokg/org/service/impl/DepartmentServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/fgbokg/org/service/impl/DepartmentServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/fgbokg/org/service/impl/EmployeeServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/fgbokg/org/service/impl/EmployeeServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/fgbokg/org/service/impl/ShopServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/fgbokg/org/service/impl/ShopServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/fgbokg/user/controller/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/fgbokg/user/controller/UserController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/fgbokg/user/mapper/UserMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/fgbokg/user/mapper/UserMapper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/fgbokg/user/service/IUserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/fgbokg/user/service/IUserService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/fgbokg/user/service/impl/UserServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/fgbokg/user/service/impl/UserServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/org/fgbokg/org/mapper/ShopMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/org/fgbokg/org/mapper/ShopMapper.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/org/fgbokg/user/mapper/UserMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/org/fgbokg/user/mapper/UserMapper.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -131,6 +114,7 @@
       </MavenImportingSettings>
     </option>
   </component>
+  <component name="ProjectId" id="1mhO2vc8rfanJKmkThOBOH0Ski5" />
   <component name="ProjectInspectionProfilesVisibleTreeState">
     <entry key="Project Default">
       <profile-state>
@@ -150,21 +134,27 @@
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <ConfirmationsSetting value="1" id="Add" />
   </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showExcludedFiles" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
   <component name="PropertiesComponent">
-    <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
+    <property name="RequestMappingsPanelOrder0" value="0" />
+    <property name="RequestMappingsPanelOrder1" value="1" />
+    <property name="RequestMappingsPanelOrder2" value="2" />
+    <property name="RequestMappingsPanelWidth0" value="75" />
+    <property name="RequestMappingsPanelWidth1" value="75" />
+    <property name="RequestMappingsPanelWidth2" value="75" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="com.intellij.database.dataSource.DataSourceTemplate" value="MySQL" />
-    <property name="settings.editor.selected.configurable" value="configurable.group.appearance" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary" value="JUnit4" />
-    <property name="RequestMappingsPanelWidth0" value="75" />
-    <property name="RequestMappingsPanelOrder0" value="0" />
-    <property name="RequestMappingsPanelWidth1" value="75" />
-    <property name="RequestMappingsPanelOrder1" value="1" />
-    <property name="RequestMappingsPanelWidth2" value="75" />
-    <property name="RequestMappingsPanelOrder2" value="2" />
     <property name="last_directory_selection" value="$PROJECT_DIR$/src/main/java/org/fgbokg/sm" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
+    <property name="settings.editor.selected.configurable" value="configurable.group.appearance" />
   </component>
   <component name="RecentsManager">
     <key name="CreateTestDialog.RecentsKey">
@@ -351,6 +341,7 @@
       <workItem from="1609635007329" duration="25583000" />
       <workItem from="1609722312810" duration="22844000" />
       <workItem from="1609808151139" duration="20082000" />
+      <workItem from="1609942162795" duration="24000" />
     </task>
     <task id="LOCAL-00001" summary="1">
       <created>1609325269646</created>
@@ -400,6 +391,12 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="1" />
     <option name="LAST_COMMIT_MESSAGE" value="1" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="461" y="239" key="com.intellij.ide.util.TipDialog" timestamp="1609942169682">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="461" y="239" key="com.intellij.ide.util.TipDialog/0.0.1536.824@0.0.1536.824" timestamp="1609942169682" />
   </component>
   <component name="masterDetails">
     <states>
