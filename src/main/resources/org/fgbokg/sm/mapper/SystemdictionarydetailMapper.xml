@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="org.fgbokg.sm.mapper.SystemdictionarydetailMapper">
+
+    <!-- 根据id加载数据字典明细 -->
+    <select id="loadOne" resultType="Systemdictionarydetail">
+        SELECT * FROM t_systemdictionarydetail WHERE id = #{id}
+    </select>
+
+    <!-- 加载所有数据字典明细 -->
+    <select id="loadAll" resultType="Systemdictionarydetail">
+        SELECT * FROM t_systemdictionarydetail
+    </select>
+
+    <!-- 添加数据字典明细 -->
+    <insert id="save" useGeneratedKeys="true" keyProperty="id" keyColumn="id">
+        INSERT INTO t_systemdictionarydetail(name, types_id)
+        VALUES (#{name},#{types_id});
+    </insert>
+
+    <!-- 修改数据字典明细数据 -->
+    <update id="update">
+        UPDATE t_systemdictionarydetail
+        SET name = #{name}, types_id = #{types_id}
+        WHERE id = #{id}
+    </update>
+
+    <!-- 删除数据字典明细 -->
+    <delete id="remove">
+        DELETE FROM t_systemdictionarydetail WHERE id = #{id}
+    </delete>
+
+    <!-- 批量删除 -->
+    <delete id="patchDelete">
+        DELETE FROM t_systemdictionarydetail WHERE id IN
+        <foreach collection="list" separator="," open="(" close=")" item="id">
+            #{id}
+        </foreach>
+    </delete>
+
+    <!-- 分页查询-查询总条数 -->
+    <select id="queryCount" resultType="long">
+        SELECT
+          count(*)
+        FROM
+          t_systemdictionarydetail s
+        LEFT JOIN t_systemdictionarytype t ON s.types_id = t.id
+        WHERE t.id = #{types_id}
+        <include refid="whereSql"></include>
+    </select>
+
+    <sql id="whereSql">
+        <if test="keyword !=null and '' != keyword">
+            AND s.name LIKE concat("%",#{keyword},"%")
+        </if>
+    </sql>
+
+    <!-- 分页查询-查询每页的数据 -->
+    <select id="queryList" resultMap="systemdictionarydetailMap">
+        SELECT
+          s.*,
+          t.id tid,
+          t.name tname
+        FROM
+          t_systemdictionarydetail s
+          LEFT JOIN t_systemdictionarytype t ON s.types_id = t.id
+        WHERE t.id = #{types_id}
+        <include refid="whereSql"></include>
+        limit #{begin}, #{pageSize}
+    </select>
+    <resultMap id="systemdictionarydetailMap" type="Systemdictionarydetail">
+        <id column="id" property="id"></id>
+        <result column="name" property="name"></result>
+        <association property="types" javaType="Systemdictionarytype">
+            <id column="tid" property="id"></id>
+            <result column="tname" property="name"></result>
+        </association>
+    </resultMap>
+
+</mapper>

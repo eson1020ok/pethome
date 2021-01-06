@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="org.fgbokg.org.mapper.DepartmentMapper">
+
+    <!-- 根据id加载部门 -->
+    <select id="loadOne" resultType="Department">
+        SELECT * FROM t_department WHERE id = #{id}
+    </select>
+
+    <!-- 加载所有部门 -->
+    <select id="loadAll" resultType="Department">
+        SELECT * FROM t_department
+    </select>
+
+    <!-- 添加部门 -->
+    <insert id="save" useGeneratedKeys="true" keyProperty="id" keyColumn="id">
+        INSERT INTO t_department(sn, name, dirPath, state, manager_id, parent_id)
+        VALUES (#{sn},#{name},#{dirPath},#{state},#{manager.id},#{parent.id});
+    </insert>
+
+    <!-- 修改部门数据 -->
+    <update id="update">
+        UPDATE t_department
+        SET sn = #{sn}, name = #{name}, dirPath = #{dirPath}, state = #{state}, manager_id = #{manager.id}, parent_id = #{parent.id}
+        WHERE id = #{id}
+    </update>
+
+    <!-- 删除部门 -->
+    <delete id="remove">
+        DELETE FROM t_department WHERE id = #{id}
+    </delete>
+
+    <!-- 批量删除 -->
+    <delete id="patchDelete">
+        DELETE FROM t_department WHERE id IN
+        <foreach collection="list" separator="," open="(" close=")" item="id">
+            #{id}
+        </foreach>
+    </delete>
+
+    <!-- 分页查询-查询总条数 -->
+    <select id="queryCount" resultType="long">
+        SELECT count(*) FROM t_department d
+        <include refid="whereSql"></include>
+    </select>
+
+    <sql id="whereSql">
+        <where>
+            <if test="keyword !=null and '' != keyword">
+                AND (d.name LIKE concat("%",#{keyword},"%") or d.sn LIKE concat("%",#{keyword},"%"))
+            </if>
+        </where>
+    </sql>
+
+    <!-- 分页查询-查询每页的数据 -->
+    <select id="queryList" resultMap="departmentMap">
+        SELECT
+          d.*,
+          e.id eid,
+          e.username,
+          p.id pid,
+          p.name pname
+        FROM
+          t_department d
+          LEFT JOIN t_employee e ON d.manager_id = e.id
+          LEFT JOIN t_department p ON d.parent_id = p.id
+        <include refid="whereSql"></include>
+        limit #{begin}, #{pageSize}
+    </select>
+    <resultMap id="departmentMap" type="Department">
+        <id column="id" property="id"></id>
+        <result column="name" property="name"></result>
+        <result column="sn" property="sn"></result>
+        <result column="dirPath" property="dirPath"></result>
+        <result column="state" property="state"></result>
+        <association property="manager" javaType="Employee">
+            <id column="eid" property="id"></id>
+            <result column="username" property="username"></result>
+        </association>
+        <association property="parent" javaType="Department">
+            <id column="pid" property="id"></id>
+            <result column="pname" property="name"></result>
+        </association>
+    </resultMap>
+
+    <!-- 加载部门树，查询所有的一级部门和对应的二级部门 -->
+    <select id="loadDeptTree" resultMap="deptTreeMap">
+        SELECT
+            f.*,
+            s.id sid,
+            s.name sname
+        FROM
+            t_department f
+            LEFT JOIN t_department s ON f.id = s.parent_id
+        WHERE
+            f.parent_id IS NULL
+            <if test="id != null">
+                AND f.id != #{id} AND s.id != #{id}
+            </if>
+    </select>
+    <resultMap id="deptTreeMap" type="Department">
+        <id column="id" property="id"></id>
+        <result column="name" property="name"></result>
+        <collection property="children" ofType="Department">
+            <id column="sid" property="id"></id>
+            <result column="sname" property="name"></result>
+        </collection>
+    </resultMap>
+</mapper>

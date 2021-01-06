@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="org.fgbokg.sm.mapper.SystemdictionarytypeMapper">
+
+    <!-- 根据id加载数据字典 -->
+    <select id="loadOne" resultType="Systemdictionarytype">
+        SELECT * FROM t_systemdictionarytype WHERE id = #{id}
+    </select>
+
+    <!-- 加载所有数据字典 -->
+    <select id="loadAll" resultType="Systemdictionarytype">
+        SELECT * FROM t_systemdictionarytype
+    </select>
+
+    <!-- 添加数据字典 -->
+    <insert id="save" useGeneratedKeys="true" keyProperty="id" keyColumn="id">
+        INSERT INTO t_systemdictionarytype(sn, name)
+        VALUES (#{sn},#{name});
+    </insert>
+
+    <!-- 修改数据字典数据 -->
+    <update id="update">
+        UPDATE t_systemdictionarytype
+        SET sn = #{sn}, name = #{name}
+        WHERE id = #{id}
+    </update>
+
+    <!-- 删除数据字典 -->
+    <delete id="remove">
+        DELETE FROM t_systemdictionarytype WHERE id = #{id}
+    </delete>
+
+    <!-- 批量删除 -->
+    <delete id="patchDelete">
+        DELETE FROM t_systemdictionarytype WHERE id IN
+        <foreach collection="list" separator="," open="(" close=")" item="id">
+            #{id}
+        </foreach>
+    </delete>
+
+    <!-- 分页查询-查询总条数 -->
+    <select id="queryCount" resultType="long">
+        SELECT count(*) FROM t_systemdictionarytype
+        <include refid="whereSql"></include>
+    </select>
+
+    <sql id="whereSql">
+        <where>
+            <if test="keyword !=null and '' != keyword">
+                AND (name LIKE concat("%",#{keyword},"%") or sn LIKE concat("%",#{keyword},"%"))
+            </if>
+        </where>
+    </sql>
+
+    <!-- 分页查询-查询每页的数据 resultMap="systemdictionarytypeMap" -->
+    <select id="queryList" resultType="Systemdictionarytype">
+        SELECT
+          *
+        FROM
+          t_systemdictionarytype
+        <include refid="whereSql"></include>
+        limit #{begin}, #{pageSize}
+    </select>
+</mapper>

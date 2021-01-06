@@ -1,7 +1,7 @@
 # pethome
 
 #### Description
-后台代码
+宠物之家后台系统
 
 #### Software Architecture
 Software architecture description

@@ -1,0 +1,419 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="1b0e8140-9e31-46f7-92cb-294c2c5235c5" name="Default" comment="1">
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/7914168c-f5fc-450b-880f-c343670666da.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/7914168c-f5fc-450b-880f-c343670666da.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/fgbokg/basic/query/BaseQuery.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/fgbokg/basic/query/BaseQuery.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/fgbokg/org/controller/ShopController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/fgbokg/org/controller/ShopController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/fgbokg/org/mapper/EmployeeMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/fgbokg/org/mapper/EmployeeMapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/fgbokg/org/mapper/ShopMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/fgbokg/org/mapper/ShopMapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/fgbokg/org/service/IEmployeeService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/fgbokg/org/service/IEmployeeService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/fgbokg/org/service/IShopService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/fgbokg/org/service/IShopService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/fgbokg/org/service/impl/DepartmentServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/fgbokg/org/service/impl/DepartmentServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/fgbokg/org/service/impl/EmployeeServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/fgbokg/org/service/impl/EmployeeServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/fgbokg/org/service/impl/ShopServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/fgbokg/org/service/impl/ShopServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/fgbokg/user/controller/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/fgbokg/user/controller/UserController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/fgbokg/user/mapper/UserMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/fgbokg/user/mapper/UserMapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/fgbokg/user/service/IUserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/fgbokg/user/service/IUserService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/fgbokg/user/service/impl/UserServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/fgbokg/user/service/impl/UserServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/org/fgbokg/org/mapper/ShopMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/org/fgbokg/org/mapper/ShopMapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/org/fgbokg/user/mapper/UserMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/org/fgbokg/user/mapper/UserMapper.xml" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="DatabaseView">
+    <option name="SHOW_INTERMEDIATE" value="true" />
+    <option name="GROUP_DATA_SOURCES" value="true" />
+    <option name="GROUP_SCHEMA" value="true" />
+    <option name="GROUP_CONTENTS" value="false" />
+    <option name="SORT_POSITIONED" value="false" />
+    <option name="SHOW_TABLE_DETAILS" value="true" />
+    <option name="SHOW_EMPTY_GROUPS" value="false" />
+    <option name="AUTO_SCROLL_FROM_SOURCE" value="false" />
+    <expand>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="pethome@localhost" type="feb32156:DbDataSourceImpl" />
+      </path>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="pethome@localhost" type="feb32156:DbDataSourceImpl" />
+        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
+      </path>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="pethome@localhost" type="feb32156:DbDataSourceImpl" />
+        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
+        <item name="pethome: schema" type="c314c289:MysqlImplModel$Schema" />
+      </path>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="pethome@localhost" type="feb32156:DbDataSourceImpl" />
+        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
+        <item name="pethome: schema" type="c314c289:MysqlImplModel$Schema" />
+        <item name="t_product_comment: table" type="98d5ac3d:MysqlImplModel$Table" />
+      </path>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="pethome@localhost" type="feb32156:DbDataSourceImpl" />
+        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
+        <item name="pethome: schema" type="c314c289:MysqlImplModel$Schema" />
+        <item name="t_systemdictionarytype: table" type="98d5ac3d:MysqlImplModel$Table" />
+      </path>
+    </expand>
+    <select />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="XML Mapper" />
+        <option value="JUnit4 Test Class" />
+        <option value="Interface" />
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>loadDeptTree</find>
+      <find>员工</find>
+      <find>tQuery</find>
+      <find>employeeMapper</find>
+      <find>employee</find>
+      <find>部门</find>
+      <find>department</find>
+      <find>数据字典明细</find>
+      <find>systemdictionarydetail</find>
+      <find>Systemdictionarytype</find>
+    </findStrings>
+    <replaceStrings>
+      <replace>员工</replace>
+      <replace>employee</replace>
+      <replace>店铺</replace>
+      <replace>对象</replace>
+      <replace>baseQuery</replace>
+      <replace>baseMapper</replace>
+      <replace>t</replace>
+      <replace>shop</replace>
+      <replace>数据字典明细</replace>
+      <replace>systemdictionarydetail</replace>
+      <replace>数据字典</replace>
+      <replace>systemdictionarytype</replace>
+    </replaceStrings>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/src/main/java/org/fgbokg/org/controller/ShopController.java" root0="SKIP_INSPECTION" />
+    <setting file="file://$PROJECT_DIR$/src/main/java/org/fgbokg/basic/controller/VerificationCodeController.java" root0="SKIP_INSPECTION" />
+    <setting file="file://$PROJECT_DIR$/src/main/java/org/fgbokg/sm/controller/SystemdictionarydetailController.java" root0="SKIP_INSPECTION" />
+    <setting file="file://$PROJECT_DIR$/src/main/java/org/fgbokg/basic/service/impl/BaseServiceImpl.java" root0="SKIP_INSPECTION" />
+    <setting file="file://$PROJECT_DIR$/src/main/java/org/fgbokg/user/service/impl/UserServiceImpl.java" root0="SKIP_INSPECTION" />
+    <setting file="file://$PROJECT_DIR$/src/main/java/org/fgbokg/org/service/impl/ShopServiceImpl.java" root0="SKIP_INSPECTION" />
+    <setting file="file://$PROJECT_DIR$/src/main/java/org/fgbokg/org/service/impl/EmployeeServiceImpl.java" root0="SKIP_INSPECTION" />
+    <setting file="file://$PROJECT_DIR$/src/main/java/org/fgbokg/user/controller/UserController.java" root0="SKIP_INSPECTION" />
+    <setting file="file://$PROJECT_DIR$/src/main/java/org/fgbokg/org/service/impl/DepartmentServiceImpl.java" root0="SKIP_INSPECTION" />
+    <setting file="file://$PROJECT_DIR$/src/main/java/org/fgbokg/user/controller/RejectController.java" root0="SKIP_INSPECTION" />
+    <setting file="file://$PROJECT_DIR$/src/main/java/org/fgbokg/sm/service/impl/SystemdictionarytypeServiceImpl.java" root0="SKIP_INSPECTION" />
+    <setting file="file://$PROJECT_DIR$/src/main/java/org/fgbokg/sm/service/impl/SystemdictionarydetailServiceImpl.java" root0="SKIP_INSPECTION" />
+    <setting file="file://$PROJECT_DIR$/src/test/java/org/fgbokg/org/mail/MailTest.java" root0="SKIP_INSPECTION" />
+  </component>
+  <component name="MavenImportPreferences">
+    <option name="importingSettings">
+      <MavenImportingSettings>
+        <option name="importAutomatically" value="true" />
+      </MavenImportingSettings>
+    </option>
+  </component>
+  <component name="ProjectInspectionProfilesVisibleTreeState">
+    <entry key="Project Default">
+      <profile-state>
+        <expanded-state>
+          <State>
+            <id />
+          </State>
+        </expanded-state>
+        <selected-state>
+          <State>
+            <id>Android</id>
+          </State>
+        </selected-state>
+      </profile-state>
+    </entry>
+  </component>
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="1" id="Add" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="com.intellij.database.dataSource.DataSourceTemplate" value="MySQL" />
+    <property name="settings.editor.selected.configurable" value="configurable.group.appearance" />
+    <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary" value="JUnit4" />
+    <property name="RequestMappingsPanelWidth0" value="75" />
+    <property name="RequestMappingsPanelOrder0" value="0" />
+    <property name="RequestMappingsPanelWidth1" value="75" />
+    <property name="RequestMappingsPanelOrder1" value="1" />
+    <property name="RequestMappingsPanelWidth2" value="75" />
+    <property name="RequestMappingsPanelOrder2" value="2" />
+    <property name="last_directory_selection" value="$PROJECT_DIR$/src/main/java/org/fgbokg/sm" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CreateTestDialog.RecentsKey">
+      <recent name="org.fgbokg.org.service" />
+    </key>
+    <key name="CreateTestDialog.Recents.Supers">
+      <recent name="" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="E:\IDEA\idea_workspaces\pethome\src\main\resources\org\fgbokg\sm\mapper" />
+      <recent name="E:\IDEA\idea_workspaces\pethome\src\main\resources\org\fgbokg\user\mapper" />
+      <recent name="E:\IDEA\idea_workspaces\pethome\src\main\java\org\fgbokg\basic\util" />
+      <recent name="E:\IDEA\idea_workspaces\pethome\src\main\resources" />
+      <recent name="E:\IDEA\idea_workspaces\pethome\src\test\java\org\fgbokg\org" />
+    </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="org.fgbokg.sm.controller" />
+      <recent name="org.fgbokg.sm.service.impl" />
+      <recent name="org.fgbokg.sm.service" />
+      <recent name="org.fgbokg.sm.query" />
+      <recent name="org.fgbokg.sm.mapper" />
+    </key>
+    <key name="CreateClassDialog.RecentsKey">
+      <recent name="org.fgbokg.sm.service.impl" />
+      <recent name="org.fgbokg.user.service.impl" />
+      <recent name="org.fgbokg.user.service" />
+      <recent name="org.fgbokg.basic.service.impl" />
+      <recent name="org.fgbokg.org.service.impl" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Spring Boot.PetHomeApplication">
+    <configuration default="true" type="Applet" factoryName="Applet">
+      <option name="HTML_USED" value="false" />
+      <option name="WIDTH" value="400" />
+      <option name="HEIGHT" value="300" />
+      <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
+      <module />
+    </configuration>
+    <configuration name="Str" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Str" />
+      <module name="pethome" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="Application" factoryName="Application">
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="IDepartmentServiceTest.add" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="pethome" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="org.fgbokg.org.service.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="org.fgbokg.org.service" />
+      <option name="MAIN_CLASS_NAME" value="org.fgbokg.org.service.IDepartmentServiceTest" />
+      <option name="METHOD_NAME" value="add" />
+      <option name="TEST_OBJECT" value="method" />
+      <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="MailTest.test1" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="pethome" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="org.fgbokg.org.mail.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="org.fgbokg.org.mail" />
+      <option name="MAIN_CLASS_NAME" value="org.fgbokg.org.mail.MailTest" />
+      <option name="METHOD_NAME" value="test1" />
+      <option name="TEST_OBJECT" value="method" />
+      <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="MailTest.test2" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="pethome" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="org.fgbokg.org.mail.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="org.fgbokg.org.mail" />
+      <option name="MAIN_CLASS_NAME" value="org.fgbokg.org.mail.MailTest" />
+      <option name="METHOD_NAME" value="test2" />
+      <option name="TEST_OBJECT" value="method" />
+      <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="JUnit" factoryName="JUnit">
+      <option name="TEST_OBJECT" value="class" />
+      <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="PetHomeApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true" nameIsGenerated="true">
+      <module name="pethome" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="org.fgbokg.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="SPRING_BOOT_MAIN_CLASS" value="org.fgbokg.PetHomeApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="TestNG">
+      <option name="TEST_OBJECT" value="CLASS" />
+      <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="#org.jetbrains.idea.devkit.run.PluginConfigurationType">
+      <module name="" />
+      <option name="VM_PARAMETERS" value="-Xmx512m -Xms256m -XX:MaxPermSize=250m -ea" />
+      <option name="PROGRAM_PARAMETERS" />
+      <predefined_log_file enabled="true" id="idea.log" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <list>
+      <item itemvalue="Application.Str" />
+      <item itemvalue="JUnit.IDepartmentServiceTest.add" />
+      <item itemvalue="JUnit.MailTest.test1" />
+      <item itemvalue="JUnit.MailTest.test2" />
+      <item itemvalue="Spring Boot.PetHomeApplication" />
+    </list>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Spring Boot.PetHomeApplication" />
+        <item itemvalue="JUnit.MailTest.test2" />
+        <item itemvalue="JUnit.MailTest.test1" />
+        <item itemvalue="JUnit.IDepartmentServiceTest.add" />
+        <item itemvalue="Application.Str" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="1b0e8140-9e31-46f7-92cb-294c2c5235c5" name="Default" comment="" />
+      <created>1608603045398</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1608603045398</updated>
+      <workItem from="1608603049108" duration="2117000" />
+      <workItem from="1608606341623" duration="21172000" />
+      <workItem from="1608685173840" duration="2882000" />
+      <workItem from="1608788259909" duration="7188000" />
+      <workItem from="1608806586028" duration="165000" />
+      <workItem from="1608857484885" duration="2124000" />
+      <workItem from="1608970900203" duration="58000" />
+      <workItem from="1609032282217" duration="10564000" />
+      <workItem from="1609117624194" duration="20741000" />
+      <workItem from="1609165160193" duration="634000" />
+      <workItem from="1609232691113" duration="10333000" />
+      <workItem from="1609289586231" duration="5215000" />
+      <workItem from="1609308609702" duration="1906000" />
+      <workItem from="1609317792229" duration="7341000" />
+      <workItem from="1609549744700" duration="25050000" />
+      <workItem from="1609635007329" duration="25583000" />
+      <workItem from="1609722312810" duration="22844000" />
+      <workItem from="1609808151139" duration="20082000" />
+    </task>
+    <task id="LOCAL-00001" summary="1">
+      <created>1609325269646</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1609325269646</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
+    <servers />
+  </component>
+  <component name="TestHistory">
+    <history-entry file="MailTest_test2 - 2021.01.02 at 20h 16m 12s.xml">
+      <configuration name="MailTest.test2" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="MailTest_test2 - 2021.01.02 at 20h 17m 22s.xml">
+      <configuration name="MailTest.test2" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="MailTest_test2 - 2021.01.02 at 20h 17m 57s.xml">
+      <configuration name="MailTest.test2" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="MailTest_test2 - 2021.01.02 at 20h 20m 11s.xml">
+      <configuration name="MailTest.test2" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="MailTest_test2 - 2021.01.02 at 20h 39m 03s.xml">
+      <configuration name="MailTest.test2" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="MailTest_test2 - 2021.01.02 at 20h 42m 19s.xml">
+      <configuration name="MailTest.test2" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="MailTest_test2 - 2021.01.02 at 20h 42m 53s.xml">
+      <configuration name="MailTest.test2" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="MailTest_test2 - 2021.01.02 at 20h 55m 52s.xml">
+      <configuration name="MailTest.test2" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="MailTest_test2 - 2021.01.02 at 20h 58m 09s.xml">
+      <configuration name="MailTest.test2" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="MailTest_test2 - 2021.01.02 at 21h 00m 05s.xml">
+      <configuration name="MailTest.test2" configurationId="JUnit" />
+    </history-entry>
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="1" />
+    <option name="LAST_COMMIT_MESSAGE" value="1" />
+  </component>
+  <component name="masterDetails">
+    <states>
+      <state key="Copyright.UI">
+        <settings>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+    </states>
+  </component>
+</project>

@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="org.fgbokg.org.mapper.ShopMapper">
+
+    <!-- 根据id加载店铺 -->
+    <select id="loadOne" resultType="Shop">
+        SELECT * FROM t_shop WHERE id = #{id}
+    </select>
+
+    <!-- 加载所有店铺 -->
+    <select id="loadAll" resultType="Shop">
+        SELECT * FROM t_shop
+    </select>
+
+    <!-- 根据店铺名查询对象 -->
+    <select id="loadByName" resultType="Shop">
+        SELECT * FROM t_shop WHERE name = #{name}
+    </select>
+
+    <!-- 根据员工id查询出店铺对象 -->
+    <select id="loadByAdminId" resultType="Shop">
+        SELECT * FROM t_shop WHERE admin_id = #{admin_id}
+    </select>
+
+    <!-- 添加店铺 -->
+    <insert id="save" useGeneratedKeys="true" keyColumn="id" keyProperty="id">
+        INSERT INTO t_shop(name, tel, registerTime, state, address, logo, admin_id)
+        VALUES (
+          #{name},
+          #{tel},
+          #{registerTime},
+          #{state},
+          #{address},
+          #{logo},
+          #{admin.id}
+        );
+    </insert>
+
+    <!-- 修改店铺数据 -->
+    <update id="update">
+        UPDATE t_shop
+        <set>
+          <if test="name != null and name != '' ">
+              name = #{name},
+          </if>
+          <if test="tel != null and tel != '' ">
+              tel = #{tel},
+          </if>
+          <if test="state != null">
+              state = #{state},
+          </if>
+          <if test="address != null and address != '' ">
+              address = #{address},
+          </if>
+          <if test="admin != null and admin.id != null">
+              admin_id = #{admin.id},
+          </if>
+          <if test="logo != null and logo != '' ">
+              logo = #{logo},
+          </if>
+        </set>
+        WHERE id = #{id}
+    </update>
+
+    <!-- 删除店铺 -->
+    <delete id="remove">
+        DELETE FROM t_shop WHERE id = #{id}
+    </delete>
+
+    <!-- 批量删除 -->
+    <delete id="patchDelete">
+        DELETE FROM t_shop WHERE id IN
+        <foreach collection="list" separator="," open="(" close=")" item="id">
+            #{id}
+        </foreach>
+    </delete>
+
+    <!-- 分页查询-查询总条数 -->
+    <select id="queryCount" resultType="long">
+        SELECT count(*) FROM t_shop
+        <include refid="whereSql"></include>
+    </select>
+
+    <sql id="whereSql">
+        <where>
+            <if test="keyword !=null and '' != keyword">
+                AND name LIKE concat("%",#{keyword},"%")
+            </if>
+        </where>
+    </sql>
+
+    <!-- 分页查询-查询每页的数据 -->
+    <select id="queryList" resultMap="shopMap">
+        SELECT
+            s.*,
+            e.id eid,
+            e.username
+        FROM
+            t_shop s
+            LEFT JOIN t_employee e ON e.shop_id = s.id
+        <include refid="whereSql"></include>
+        limit #{begin}, #{pageSize}
+    </select>
+    <resultMap id="shopMap" type="Shop">
+        <id column="id" property="id"></id>
+        <result column="name" property="name"></result>
+        <result column="tel" property="tel"></result>
+        <result column="registerTime" property="registerTime"></result>
+        <result column="state" property="state"></result>
+        <result column="address" property="address"></result>
+        <result column="logo" property="logo"></result>
+        <collection property="admin" ofType="Employee">
+            <id column="eid" property="id"></id>
+            <result column="username" property="username"></result>
+        </collection>
+    </resultMap>
+
+</mapper>
