@@ -14,14 +14,14 @@ spring:
 
 # 配置别名 + 扫描mapper映射文件
 mybatis:
-  type-aliases-package: org.fgbokg.org.domain, org.fgbokg.org.query,
-                        org.fgbokg.user.domain, org.fgbokg.user.query,
-                        org.fgbokg.sm.domain, org.fgbokg.sm.query
-  mapper-locations: classpath:org/fgbokg/mapper/*.xml    # 约定大于配置，可以不写
+  type-aliases-package: org.eson.org.domain, org.eson.org.query,
+                        org.eson.user.domain, org.eson.user.query,
+                        org.eson.systemdictionary.domain, org.eson.systemdictionary.query
+  mapper-locations: classpath:org/esom/mapper/*.xml    # 约定大于配置，可以不写
 
 # 日志
 logging:
   level:
     org:
-      fgbokg: trace
+      eson: trace
     root: info

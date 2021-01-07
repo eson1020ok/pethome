@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+    PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+    "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="org.eson.org.mapper.EmployeeMapper">
+
+    <!--Employee loadOne(Long id);-->
+    <select id="loadOne" resultType="Employee">
+        SELECT * FROM t_employee WHERE id = #{id}
+    </select>
+
+    <!--根据用户名查询员工对象-->
+    <select id="loadByUsername" resultType="Employee">
+        SELECT * FROM t_employee WHERE username=#{username}
+    </select>
+
+    <!--List<Employee> loadAll();-->
+    <select id="loadAll" resultType="Employee">
+        SELECT * FROM t_employee
+    </select>
+
+    <!--void save(Employee employee);-->
+    <insert id="save" useGeneratedKeys="true" keyProperty="id" keyColumn="id">
+        insert into t_employee(username, email, phone, salt, password, age, state, department_id, shop_id,logininfo_id)
+        values (
+          #{username},
+          #{email},
+          #{phone},
+          #{salt},
+          #{password},
+          #{age},
+          #{state},
+          #{department.id},
+          #{shop.id},
+          #{loginInfo.id}
+        );
+    </insert>
+
+    <!--void update(Employee employee);-->
+    <update id="update">
+        update t_employee set
+        sn = #{sn},name = #{name},dirPath = #{dirPath},
+        state = #{state},manager_id = #{manager.id},parent_id = #{parent.id}
+        where id = #{id}
+    </update>
+
+    <!--void remove(Long id);-->
+    <delete id="remove">
+        DELETE FROM t_employee WHERE id = #{id}
+    </delete>
+
+    <!--Integer queryCount(EmployeeQuery employeeQuery);-->
+    <select id="queryCount" resultType="int">
+        SELECT count(*) FROM t_employee
+        <include refid="whereSql"></include>
+    </select>
+
+    <sql id="whereSql">
+        <where>
+            <if test="keyword !=null and '' != keyword">
+                AND name LIKE concat("%",#{keyword},"%")
+            </if>
+        </where>
+    </sql>
+
+    <!--List<Employee> queryList(EmployeeQuery employeeQuery);-->
+    <select id="queryList" resultType="Employee">
+        SELECT
+            *
+        FROM
+            t_employee
+        <include refid="whereSql"></include>
+        limit #{begin},#{pageSize}
+    </select>
+    <!--<resultMap id="EmployeeMap" type="Employee">
+        &lt;!&ndash;基本信息&ndash;&gt;
+        &lt;!&ndash;private Long id;            //id&ndash;&gt;
+        <id property="id" column="id"></id>
+        <result property="sn" column="sn"></result>
+        <result property="name" column="name"></result>
+        <result property="dirPath" column="dirPath"></result>
+        <result property="state" column="state"></result>
+        <association property="manager" javaType="Employee">
+            <id property="id" column="eid"></id>
+            <result property="username" column="username"></result>
+        </association>
+        <association property="parent" javaType="Employee">
+            <id property="id" column="pid"></id>
+            <result property="name" column="pname"></result>
+        </association>
+    </resultMap>-->
+
+
+    <!--void patchDel(List<Long> ids); in (1,2,3)-->
+    <delete id="patchDel">
+        DELETE FROM t_employee WHERE id IN
+        <foreach collection="list" separator="," open="(" close=")" item="id">
+            #{id}
+        </foreach>
+    </delete>
+
+</mapper>

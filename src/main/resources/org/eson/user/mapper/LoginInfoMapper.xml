@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="org.eson.user.mapper.LoginInfoMapper">
+
+    <insert id="save" useGeneratedKeys="true" keyColumn="id" keyProperty="id">
+       INSERT INTO t_logininfo(username, phone, email, salt, password, type, disable)
+       VALUES (
+        #{username},
+        #{phone},
+        #{email},
+        #{salt},
+        #{password},
+        #{type},
+        #{disable}
+       )
+   </insert>
+
+    <select id="loadByPhoneAndState" resultType="LoginInfo">
+        SELECT * FROM t_logininfo WHERE phone=#{phone} AND type=#{type}
+    </select>
+
+    <select id="loadByUsernameOrEmailOrPhoneAndType" resultType="LoginInfo">
+        SELECT * FROM t_logininfo
+        WHERE (phone=#{username} OR username=#{username} OR email=#{username})
+        AND type=#{type}
+    </select>
+</mapper>

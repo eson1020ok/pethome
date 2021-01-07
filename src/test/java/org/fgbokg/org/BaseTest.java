@@ -1,6 +1,6 @@
 package org.fgbokg.org;
 
-import org.fgbokg.PetHomeApplication;
+import org.eson.PetHomeApplication;
 import org.junit.runner.RunWith;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.context.junit4.SpringRunner;

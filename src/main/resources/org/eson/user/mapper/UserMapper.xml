@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="org.eson.user.mapper.UserMapper">
+    <!--通过手机号码查询用户对象-->
+    <select id="loadByPhone" resultType="User">
+        SELECT * FROM t_user WHERE phone=#{phone}
+    </select>
+
+    <insert id="save" useGeneratedKeys="true" keyProperty="id" keyColumn="id">
+        INSERT INTO t_user(username, email, phone, salt, password, state, age, createtime, headImg, logininfo_id)
+        VALUES (
+          #{username},
+          #{email},
+          #{phone},
+          #{salt},
+          #{password},
+          #{state},
+          #{age},
+          #{createtime},
+          #{headImg},
+          #{loginInfo.id}
+        )
+    </insert>
+
+</mapper>

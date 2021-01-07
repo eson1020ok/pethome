@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+    PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+    "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="org.eson.org.mapper.ShopMapper">
+    <!--保存店铺-->
+    <insert id="save" useGeneratedKeys="true" keyColumn="id" keyProperty="id">
+        INSERT INTO t_shop(name, tel, registerTime, state, address, logo, admin_id)
+        VALUES (
+          #{name},
+          #{tel},
+          #{registerTime},
+          #{state},
+          #{address},
+          #{logo},
+          #{admin.id}
+        )
+    </insert>
+    <!--根据名字查询店铺对象-->
+    <select id="loadByName" resultType="Shop">
+        SELECT * FROM t_shop WHERE name=#{name}
+    </select>
+
+   <!-- 修改店铺，动态修改-->
+    <update id="update">
+        UPDATE t_shop
+        <set>
+            <if test="name!=null and name!=''">
+                name=#{name},
+            </if>
+            <if test="tel!=null and tel!=''">
+                tel=#{tel},
+            </if>
+            <if test="state!=null">
+                state=#{state},
+            </if>
+            <if test="address!=null and address!=''">
+                address=#{address},
+            </if>
+            <if test="logo!=null and logo!=''">
+                logo=#{logo},
+            </if>
+            <if test="admin!=null and admin.id!=null">
+                admin_id=#{admin.id},
+            </if>
+        </set>
+        WHERE id=#{id}
+    </update>
+
+
+</mapper>

@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+    PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+    "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="org.eson.org.mapper.DepartmentMapper">
+
+    <!--Department loadOne(Long id);-->
+    <select id="loadOne" resultType="Department">
+        SELECT * FROM t_department WHERE id = #{id}
+    </select>
+
+    <!--List<Department> loadAll();-->
+    <select id="loadAll" resultType="Department">
+        SELECT * FROM t_department
+    </select>
+
+    <!--void save(Department department);-->
+    <insert id="save" useGeneratedKeys="true" keyProperty="id">
+        insert into t_department(sn, name, dirPath, state, manager_id, parent_id)
+        values (
+          #{sn},#{name},#{dirPath},#{state},#{manager.id},#{parent.id}
+        );
+    </insert>
+
+    <!--void update(Department department);-->
+    <update id="update">
+        update t_department set
+        sn = #{sn},name = #{name},dirPath = #{dirPath},
+        state = #{state},manager_id = #{manager.id},parent_id = #{parent.id}
+        where id = #{id}
+    </update>
+
+    <!--void remove(Long id);-->
+    <delete id="remove">
+        DELETE FROM t_department WHERE id = #{id}
+    </delete>
+
+    <!--Integer queryCount(DepartmentQuery departmentQuery);-->
+    <select id="queryCount" resultType="int">
+        SELECT count(*) FROM t_department d
+        <include refid="whereSql"></include>
+    </select>
+
+    <sql id="whereSql">
+        <where>
+            <if test="keyword !=null and '' != keyword">
+                AND (d.name LIKE concat("%",#{keyword},"%") or d.sn LIKE concat("%",#{keyword},"%"))
+            </if>
+        </where>
+    </sql>
+
+    <!--List<Department> queryList(DepartmentQuery departmentQuery);-->
+    <select id="queryList" resultMap="DepartmentMap">
+        SELECT
+            d.*,
+            e.id eid,
+            e.username,
+            p.id pid,
+            p.name pname
+        FROM
+            t_department d
+            LEFT JOIN t_employee e ON d.manager_id = e.id
+            LEFT JOIN t_department p ON d.parent_id = p.id
+        <include refid="whereSql"></include>
+        limit #{begin},#{pageSize}
+    </select>
+    <resultMap id="DepartmentMap" type="Department">
+        <!--基本信息-->
+        <!--private Long id;            //id-->
+        <id property="id" column="id"></id>
+        <result property="sn" column="sn"></result>
+        <result property="name" column="name"></result>
+        <result property="dirPath" column="dirPath"></result>
+        <result property="state" column="state"></result>
+        <association property="manager" javaType="Employee">
+            <id property="id" column="eid"></id>
+            <result property="username" column="username"></result>
+        </association>
+        <association property="parent" javaType="Department">
+            <id property="id" column="pid"></id>
+            <result property="name" column="pname"></result>
+        </association>
+    </resultMap>
+
+
+    <!--void patchDel(List<Long> ids); in (1,2,3)-->
+    <delete id="patchDel">
+        DELETE FROM t_department WHERE id IN
+        <foreach collection="list" separator="," open="(" close=")" item="id">
+            #{id}
+        </foreach>
+    </delete>
+
+
+    <!--List<Department> getDeptTreeForAdd();
+    List<Department> getDeptTreeForUpdate(Long id);-->
+    <select id="getDeptTreeForAdd" resultMap="treeMapAdd">
+        SELECT
+            f.*,s.id sid,s.name sname
+        FROM
+            t_department f LEFT JOIN t_department s
+            ON s.parent_id = f.id
+        WHERE
+            f.parent_id IS NULL
+    </select>
+    <resultMap id="treeMapAdd" type="Department">
+        <id property="id" column="id"></id>
+        <result property="name" column="name"></result>
+        <collection property="children" ofType="Department">
+            <id property="id" column="sid"></id>
+            <result property="name" column="sname"></result>
+        </collection>
+    </resultMap>
+
+
+    <select id="getDeptTreeForUpdate" resultMap="treeMapUpdate">
+        SELECT
+        f.*,s.id sid,s.name sname
+        FROM
+        t_department f LEFT JOIN t_department s
+        ON s.parent_id = f.id
+        WHERE
+        f.parent_id IS NULL AND f.id != #{id}
+    </select>
+    <resultMap id="treeMapUpdate" type="Department">
+        <id property="id" column="id"></id>
+        <result property="name" column="name"></result>
+        <collection property="children" ofType="Department">
+            <id property="id" column="sid"></id>
+            <result property="name" column="sname"></result>
+        </collection>
+    </resultMap>
+
+</mapper>

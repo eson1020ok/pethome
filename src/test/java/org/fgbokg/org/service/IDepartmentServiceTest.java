@@ -1,9 +1,10 @@
 package org.fgbokg.org.service;
 
+import org.eson.org.service.IDepartmentService;
 import org.fgbokg.org.BaseTest;
-import org.fgbokg.org.domain.Department;
-import org.fgbokg.org.query.DepartmentQuery;
-import org.fgbokg.basic.util.PageList;
+import org.eson.org.domain.Department;
+import org.eson.org.query.DepartmentQuery;
+import org.eson.basic.util.PageList;
 import org.junit.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 
